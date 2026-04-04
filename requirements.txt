@@ -4,4 +4,5 @@ seaborn
 matplotlib
 ydata-profiling==4.6.4
 pydantic==2.5.3
-setuptools
+setuptools==69.5.1
+pip==24.0
