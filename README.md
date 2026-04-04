@@ -34,17 +34,6 @@ Designed with a robust ETL (Extract, Transform, Load) pipeline, the app intellig
 * **Frontend UI:** Streamlit
 * **Data Manipulation:** Pandas, NumPy
 * **Data Visualization:** Plotly, Seaborn, Matplotlib
-* **Machine Learning:** Prophet, Scikit-Learn
 * **Automated Profiling:** ydata-profiling
 
-## 📂 Repository Structure
-* `forecasting_final.py`: The main Streamlit application containing the UI, cleaning pipeline, and forecasting models.
-* `generate_dataset.py`: A custom Python script to randomly engineer mathematically sound mock financial datasets for testing.
-* `requirements.txt`: The library dependencies required to run the application.
-* `company_financial_data_main.csv`: A sample dataset for immediate testing.
 
-## ⚙️ How to Run Locally
-
-1. Clone this repository:
-   ```bash
-   git clone [https://github.com/yourusername/profit_loss_forecasting.git](https://github.com/yourusername/profit_loss_forecasting.git)
