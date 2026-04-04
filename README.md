@@ -1,53 +1,50 @@
-📌 Problem Statement
+# 📊 Enterprise Profit & Loss Intelligence System
 
-Business sales data often contains:
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B.svg)
+![Machine Learning](https://img.shields.io/badge/Machine_Learning-Prophet-green.svg)
 
-Inconsistent column names (e.g., COGS, Cost of Goods, Goods)
+**Live Demo:** [Insert Your Live Streamlit Link Here]
 
-Currency symbols and commas in numeric fields
+## 📝 Overview
+This project is an end-to-end Automated Data Engineering and AI Forecasting application built with Python. It empowers businesses to move beyond static spreadsheets by automatically cleaning raw financial data, performing advanced exploratory data analysis (EDA), and utilizing time-series machine learning to predict future profitability.
 
-Improper date formatting
+Designed with a robust ETL (Extract, Transform, Load) pipeline, the app intelligently handles messy data formats and generates interactive, recruiter-ready business insights.
 
-Duplicate records
+## 🚀 Key Features
 
-Missing values
+### 1. Automated Data Cleaning Pipeline (ETL)
+* **Smart Dictionary Mapping:** Automatically detects and standardizes varied column names (e.g., mapping "Sales", "Income", or "Amount" to `revenue`).
+* **Dynamic Type Casting:** Safely scrubs string-based currency formats (removing commas and text like "rupees") and converts them to usable numeric floats without dropping text-based categorical columns.
+* **Missing Value Handling:** Provides an interactive UI to handle `NaN` values via dropping rows, or filling with mean, median, or mode.
 
-These issues prevent accurate analytics and forecasting.
+### 2. Advanced Outlier Detection
+* Implements the **Interquartile Range (IQR) method** to mathematically identify outliers in numerical columns.
+* Dynamically generates Seaborn boxplots for visual confirmation before allowing the user to seamlessly drop outliers from the dataset.
 
-This application solves that by automatically cleaning and standardizing the dataset.
-How It Works (Step-by-Step)
-1️⃣ Upload Raw CSV
+### 3. Automated Exploratory Data Analysis (EDA)
+* Integrates `ydata-profiling` to generate comprehensive, downloadable HTML reports.
+* Includes interactive Plotly correlation matrices to uncover statistical relationships between financial metrics.
 
-Users upload a company sales dataset in CSV format.
+### 4. Machine Learning Forecasting
+* Integrates **Facebook's Prophet** algorithm for robust time-series forecasting.
+* Predicts net profit and revenue trends over dynamic 30-to-365-day horizons, adjusting for localized seasonal trends and automated noise reduction.
 
-2️⃣ Column Standardization
+## 💻 Tech Stack
+* **Frontend UI:** Streamlit
+* **Data Manipulation:** Pandas, NumPy
+* **Data Visualization:** Plotly, Seaborn, Matplotlib
+* **Machine Learning:** Prophet, Scikit-Learn
+* **Automated Profiling:** ydata-profiling
 
-Automatically maps inconsistent financial column names:
+## 📂 Repository Structure
+* `forecasting_final.py`: The main Streamlit application containing the UI, cleaning pipeline, and forecasting models.
+* `generate_dataset.py`: A custom Python script to randomly engineer mathematically sound mock financial datasets for testing.
+* `requirements.txt`: The library dependencies required to run the application.
+* `company_financial_data_main.csv`: A sample dataset for immediate testing.
 
-COGS / Cost of Goods / Goods → cost
+## ⚙️ How to Run Locally
 
-Sales / Income → revenue
-
-Opex / Operating Expenses → operating_expenses
-
-Ad Spend / Marketing Spend → marketing_spend
-
-3️⃣ Data Cleaning
-
-Converts date column to datetime format
-
-Removes currency symbols (₹, $, commas)
-
-Converts financial columns to numeric
-
-Removes missing values
-
-Drops duplicates
-
-4️⃣ Data Aggregation
-
-Aggregates sales data by date for time-series analysis.
-
-5️⃣ Export Clean Dataset
-
-Users can download a cleaned CSV ready for forecasting models like Prophet.
+1. Clone this repository:
+   ```bash
+   git clone [https://github.com/yourusername/profit_loss_forecasting.git](https://github.com/yourusername/profit_loss_forecasting.git)
