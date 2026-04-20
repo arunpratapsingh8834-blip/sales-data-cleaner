@@ -26,9 +26,6 @@ Designed with a robust ETL (Extract, Transform, Load) pipeline, the app intellig
 * Integrates `ydata-profiling` to generate comprehensive, downloadable HTML reports.
 * Includes interactive Plotly correlation matrices to uncover statistical relationships between financial metrics.
 
-### 4. Machine Learning Forecasting
-* Integrates **Facebook's Prophet** algorithm for robust time-series forecasting.
-* Predicts net profit and revenue trends over dynamic 30-to-365-day horizons, adjusting for localized seasonal trends and automated noise reduction.
 
 ## 💻 Tech Stack
 * **Frontend UI:** Streamlit
